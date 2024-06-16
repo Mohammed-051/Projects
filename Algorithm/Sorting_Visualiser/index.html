@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="animateWelcome()">
+    <div class="welcome-message" id="welcomeMessage">
+        <h1>Welcome to Sorting Visualizer</h1>
+    </div>
+
+    <div class="container">
+        <div class="array-container" id="array-container"></div>
+
+        <div class="buttons" id="sortingOptions" style="display: none;">
+            <div class="dropdown">
+                <button class="dropbtn">Sorting Algorithms</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="visualizeSort(bubbleSort)">Bubble Sort</a>
+                    <a href="#" onclick="visualizeSort(selectionSort)">Selection Sort</a>
+                    <a href="#" onclick="visualizeSort(insertionSort)">Insertion Sort</a>
+                    <a href="#" onclick="visualizeSort(quickSort)">Quick Sort</a>
+                    <a href="#" onclick="visualizeSort(mergeSort)">Merge Sort</a>
+                </div>
+            </div>
+            <button onclick="generateArray()" class="generate-button">Generate New Array</button>
+            <button onclick="increaseSpeed()" class="control-button">Fast</button>
+            <button onclick="decreaseSpeed()" class="control-button">Slow</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
